@@ -669,19 +669,291 @@ a:hover {
     line-height: 1;
 }
 
-@media (max-width: 600px) {
-    .gallery-page {
-        padding: 26px 16px 40px;
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media (max-width:768px){
+    .header-menu{
+        min-height:88px;
+        padding:18px 20px;
+        flex-direction:column;
+        align-items:center;
     }
 
-    .gallery-heading {
-        align-items: start;
-        flex-direction: column;
-        gap: 8px;
+    .site-logo{
+        position:relative;
+        top:auto;
+        left:auto;
+        transform:none;
+        width:64px;
+        height:64px;
+        margin-bottom:14px;
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
+    #menu{
+        width:100%;
+        gap:10px 14px;
+        font-size:.68rem;
+        line-height:1.4;
+    }
+
+    .subscribe{
+        position:static;
+        transform:none;
+        margin-top:14px;
+        font-size:.68rem;
+    }
+
+    .main-content,
+    .artigos-recentes,
+    .category-page{
+        padding:30px 16px;
+        margin-top:15px;
+    }
+
+    .header-article{
+        margin-bottom:22px;
+    }
+
+    .header-article h1,
+    .header-article h2{
+        font-size:clamp(1.8rem,7vw,2.5rem);
+    }
+
+    .article-subheader{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .article-subheader p{
+        font-size:.9rem;
+    }
+
+    .cards-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .card h3{
+        font-size:1.2rem;
+    }
+
+    .card a{
+        font-size:.95rem;
+    }
+
+    .category-list{
+        gap:12px;
+    }
+
+    .category-item summary{
+        padding:16px;
+        font-size:1rem;
+    }
+
+    .category-submenu{
+        padding:0 16px 16px;
+    }
+
+    .category-submenu a{
+        padding:10px;
+    }
+
+    .footer{
+        padding:32px 16px;
+    }
+
+    .newsletter{
+        width:100%;
+    }
+
+    .newsletter h3{
+        font-size:1.5rem;
+    }
+
+    .newsletter p{
+        font-size:.9rem;
+    }
+
+    .newsletter-form{
+        width:100%;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .email-input{
+        width:100%;
+    }
+
+    .newsletter-button,
+    .newsletter .newsletter-form button{
+        width:100%;
+    }
+
+    .socials{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .socials p{
+        text-align:center;
+    }
+
+    #logo-footer{
+        width:80px;
+        height:80px;
+        margin:0 auto;
+    }
+
+    .form-card{
+        padding:22px 16px;
+    }
+
+    .form-card .inputs{
+        height:46px;
+    }
+
+    .form-card button{
+        width:100%;
+    }
+
+    .gallery-page{
+        padding:26px 16px 40px;
+    }
+
+    .gallery-heading{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .gallery-heading h1{
+        font-size:2rem;
+    }
+
+    .gallery-count{
+        white-space:normal;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:8px;
+    }
+
+    .gallery-item span{
+        right:6px;
+        bottom:6px;
+        font-size:.7rem;
+    }
+
+    .photo-viewer{
+        width:94vw;
+        padding:10px;
+    }
+
+    .photo-viewer img{
+        max-height:70vh;
+    }
+}
+
+@media (max-width:480px){
+    .header-menu{
+        padding:16px 12px;
+    }
+
+    .site-logo{
+        width:58px;
+        height:58px;
+    }
+
+    #menu{
+        gap:8px 10px;
+        font-size:.62rem;
+    }
+
+    .subscribe{
+        font-size:.62rem;
+    }
+
+    .main-content,
+    .artigos-recentes,
+    .category-page{
+        padding:24px 12px;
+    }
+
+    .header-article h1,
+    .header-article h2{
+        font-size:1.8rem;
+    }
+
+    .article{
+        padding:18px 16px;
+    }
+
+    .card h3{
+        font-size:1.1rem;
+    }
+
+    .category-item summary{
+        padding:14px;
+        font-size:.95rem;
+    }
+
+    .category-submenu{
+        padding:0 12px 14px;
+    }
+
+    .footer{
+        padding:28px 12px;
+    }
+
+    .gallery-page{
+        padding:22px 12px 32px;
+    }
+
+    .gallery-heading h1{
+        font-size:1.8rem;
+    }
+
+    .gallery-grid{
+        gap:6px;
+    }
+
+    .gallery-item span{
+        font-size:.65rem;
+    }
+
+    .form-card{
+        padding:18px 14px;
+    }
+}
+
+@media (max-width:360px){
+    #menu{
+        gap:7px 8px;
+        font-size:.58rem;
+    }
+
+    .subscribe{
+        font-size:.58rem;
+    }
+
+    .header-article h1,
+    .header-article h2{
+        font-size:1.6rem;
+    }
+
+    .card{
+        border-radius:12px;
+    }
+
+    .article{
+        padding:16px 14px;
+    }
+
+    .gallery-grid{
+        gap:5px;
     }
 }
