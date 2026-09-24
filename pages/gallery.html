@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização do acervo</title>
+    <link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+    <header class="header-menu">
+        <a href="../index.html" class="site-logo" aria-label="Ir para a página inicial">
+            <img src="../assets/images/site/logo-site.svg" alt="Logo do site">
+        </a>
+
+        <a href="form.html" class="subscribe">Inscreva-se</a>
+
+        <ul id="menu">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="all-article.html">Artigos</a></li>
+            <li><a href="catechesis.html">Catequeses</a></li>
+            <li><a href="collection.html">Acervo</a></li>
+            <li><a href="considerations.html">Considerações</a></li>
+        </ul>
+    </header>
+
+    <main class="gallery-page">
+        <div class="gallery-shell">
+            <a class="gallery-back" href="collection.html">&#8592; Voltar ao acervo</a>
+            <div class="gallery-heading">
+                <div>
+                    <p class="gallery-kicker">Acervo / Pasta</p>
+                    <h1 id="gallery-title">Carregando...</h1>
+                </div>
+                <p id="gallery-count" class="gallery-count"></p>
+            </div>
+            <section id="gallery-grid" class="gallery-grid" aria-live="polite"></section>
+            <p id="gallery-note" class="gallery-note" hidden></p>
+            <p id="gallery-empty" class="gallery-empty" hidden>Esta pasta ainda não possui fotografias compatíveis.</p>
+        </div>
+    </main>
+
+    <dialog id="photo-viewer" class="photo-viewer">
+        <button id="viewer-close" class="viewer-close" type="button" aria-label="Fechar visualização">&#215;</button>
+        <img id="viewer-image" src="" alt="">
+        <p id="viewer-caption"></p>
+    </dialog>
+
+    <footer class="footer">
+    <div class="newsletter">
+        <h3>Receba novidades</h3>
+        <p>Inscreva-se para receber atualizações sobre novos artigos e conteúdos.</p>
+
+        <a href="form.html" class="newsletter-button">Inscrever-se</a>
+
+        <div class="socials">
+            <img src="../assets/images/site/logo-site.svg" id="logo-footer">
+            <p>Quo Vadis Blog 2026 &copy;</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../assets/js/gallery.js"></script>
+</body>
+</html>

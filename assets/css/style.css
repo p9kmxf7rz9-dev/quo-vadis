@@ -1,0 +1,495 @@
+/* ==========================================================
+   VARIÁVEIS
+========================================================== */
+
+:root{
+    --font-principal: Arial, Helvetica, sans-serif;
+    --cor-fundo:#161616;
+    --cor-primaria:#111;
+    --cor-texto:#fff;
+    --cor-da-sombra: 0 4px 24px #e0e0e0;
+    --cor-da-linha:#fff;
+    --cor-dos-links:#D4AF37;
+    --texto-base:16px;
+    --titulo-principal:clamp(2rem, 4vw, 3.4rem);
+    --titulo-secao:clamp(1.8rem, 2.4vw, 2.5rem);
+    --titulo-card:1.2rem;
+    --texto-card:0.98rem;
+    --texto-suave:#e8e5dc;
+}
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+/* ==========================================================
+   EFEITO HOVER PARA TODOS OS LINKS
+========================================================== */
+
+a:hover{
+    color:var(--cor-dos-links) !important;
+    text-decoration:none;
+}
+
+/* ==========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================== */
+
+body{
+    font-family:var(--font-principal);
+    font-size:var(--texto-base);
+    background:var(--cor-fundo);
+    color:var(--cor-texto);
+    line-height:1.6;
+    letter-spacing:0.01em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    
+
+}
+
+
+/* ==========================================================
+   MENU PRINCIPAL
+========================================================== */
+
+.header-menu{
+    position:relative;
+    min-height:0px;
+    background-color:var(--cor-fundo);
+    display: flex;
+    text-align:center;
+    justify-content: center;
+    padding:50px;
+}
+
+.site-logo{
+    position:absolute;
+    top:50%;
+    left:100px;
+    width:100px;
+    height:100px;
+    transform:translateY(-50%);
+}
+
+.site-logo img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+#menu{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:24px;
+    margin:0;
+    padding:0;
+    font-size:.88rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+
+#menu a{
+    color:var(--cor-texto);
+    text-decoration:none;
+    font-weight:700;
+}
+
+#menu a:hover{
+    text-decoration:none;
+}
+
+.subscribe {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: .88rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   IMAGEM PRINCIPAL / HERO
+========================================================== */
+
+.container-imagem{
+    position:relative;
+}
+
+#img-principal{
+    display:block;
+    width: 100%;
+    height:min-content;
+    object-fit:cover;
+}
+
+/* Camada escura sobre a imagem */
+
+.container-imagem::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.4);
+    z-index:1;
+}
+
+/* Título sobre a imagem */
+
+.container-imagem h1{
+    position:absolute;
+    top:5%;
+    left:50%;
+    transform:translateX(-50%);
+    color:#fff;
+    font-size:24px;
+    font-weight:900;
+    width:100%;
+    text-align:center;
+    line-height:1.2;
+    letter-spacing:0;
+    text-transform:none;
+    z-index:2;
+}
+
+/* Frase em latim sobre a imagem */
+
+.container-imagem p{
+    position:absolute;
+    top:15%;
+    left:50%;
+    transform:translateX(-50%);
+    color:#fff;
+    font-size:24px;
+    width:100%;
+    text-align:center;
+    line-height:1.4;
+    letter-spacing:0;
+    text-transform:none;
+    z-index:2;
+}
+
+/* ==========================================================
+   SEÇÃO DE ARTIGOS
+========================================================== */
+
+.artigos-recentes {
+    width: 100%;
+    padding: 40px 24px;
+    border-top: 1px solid var(--cor-da-linha);
+    margin-top: 30px;
+    box-shadow: none;
+}
+/* Cabeçalho da seção */
+
+.header-article{
+    width:100%;
+    margin-bottom:24px;
+}
+
+.header-article h2{
+    margin:0 0 8px;
+    font-family:var(--font-principal);
+    font-size:var(--titulo-secao);
+    font-weight:800;
+    line-height:1.2;
+    letter-spacing:0.02em;
+}
+
+/* Subtítulo + botão "Ver todas" */
+
+.article-subheader{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+}
+
+.article-subheader p{
+    margin:0;
+    font-family:var(--font-principal);
+    font-size:1rem;
+    color:var(--texto-suave);
+}
+
+.article-subheader a{
+    margin:0;
+    font-family:var(--font-principal);
+    font-size:0.96rem;
+    font-weight:700;
+    text-decoration: none;
+    letter-spacing:0.03em;
+}
+
+/* Link "Ver todas" */
+
+.view-all{
+    color:var(--cor-texto);
+    font-size:16px;
+    text-decoration:none;
+}
+
+.view-all:hover{
+    text-decoration:none;
+}
+
+/* ==========================================================
+   GRID DOS ARTIGOS
+========================================================== */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.cards-grid a{
+    text-decoration: none;
+}
+
+/* ==========================================================
+   CARD DOS ARTIGOS
+========================================================== */
+
+.card{
+    background:var(--cor-texto);
+    border-radius:12px;
+    overflow:hidden;
+    cursor:pointer;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Conteúdo do card */
+
+.article{
+    padding:12px;
+}
+
+/* Título do artigo */
+
+.card h3{
+    color:#111;
+    margin:0 0 10px;
+    padding:0;
+    font-size:var(--titulo-card);
+    line-height:1.35;
+    font-weight:700;
+    letter-spacing:0.01em;
+}
+
+.card a{
+    color:#111;
+    display:block;
+    text-align:left;
+    margin:0;
+    padding:0;
+    font-size:var(--texto-card);
+    line-height:1.55;
+    font-weight:500;
+}
+
+.img{
+    display:block;
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* ==========================================================
+   data do artigo
+========================================================== */
+
+.publish-date{
+border:none;
+background:transparent;
+color: var(--cor-fundo);
+font-size:0.78rem;
+font-family:var(--font-principal);
+padding:0;
+margin-top:10px;
+cursor:default;
+line-height:1.6;
+letter-spacing:0.05em;
+opacity:0.8;
+}
+
+/* ==========================================================
+   RODAPÉ
+========================================================== */
+
+.footer {
+    height: auto;
+    border-top: 1px solid var(--cor-da-linha);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cor-fundo);
+    padding: 40px 24px;
+}
+
+.newsletter{
+    width:100%;
+    max-width:500px;
+    text-align:center;
+}
+
+.newsletter h3{
+    color:var(--cor-texto);
+    font-family:var(--font-principal);
+    font-size:clamp(1.5rem, 2vw, 2.1rem);
+    font-weight:800;
+    margin-bottom:10px;
+    letter-spacing:0.03em;
+}
+
+.newsletter p{
+    width:100%;
+    margin:0 auto 20px;
+    color:var(--texto-suave);
+    font-size:1rem;
+    line-height:1.5;
+}
+
+/* Formulário */
+
+.newsletter-form{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+}
+
+.email-input{
+    width:280px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:0 12px;
+    border:1px solid #dcdcd4;
+    border-radius:6px;
+    background:#faf9f5;
+}
+
+.email-input span{
+    color:#849089;
+    font-size:14px;
+}
+
+.email-input input{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    color:#111;
+    font-size:14px;
+}
+
+.email-input input::placeholder{
+    color:#9ba19d;
+}
+
+.newsletter-button{
+    height:40px;
+    padding:0 18px;
+    border:none;
+    border-radius:6px;
+    background:var(--cor-dos-links);
+    color:#fff;
+    cursor:pointer;
+    font-size:0.88rem;
+    font-weight:700;
+    letter-spacing:0.04em;
+    box-sizing:border-box;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.3s ease;
+}
+
+.newsletter-button:hover{
+    background: var(--cor-fundo);
+    color:#fff;
+}
+
+/* ==========================================================
+   REDES SOCIAIS
+========================================================== */
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 0px;
+}
+
+.socials p {
+    width: auto;
+    text-align: left;
+    color: #b8b8b8;
+    margin: 0;
+    transition: color .2s ease;
+}
+
+#logo-footer {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* ==========================================================
+   RESPONSIVIDADE
+========================================================== */
+
+@media (max-width:768px){
+
+    .header-menu{
+        min-height:88px;
+        padding:12px 84px;
+    }
+
+    .site-logo{
+        left:12px;
+        width:68px;
+        height:68px;
+    }
+
+    .cards-grid{
+        grid-template-columns:1fr;
+    }
+
+    #menu{
+        flex-wrap:wrap;
+        font-size:16px;
+        gap:15px;
+    }
+
+    .container-imagem h1{
+        font-size:20px;
+    }
+
+    .container-imagem p{
+        font-size:14px;
+    }
+}
+

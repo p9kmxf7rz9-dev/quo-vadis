@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+    <header class="header-menu">
+        <a href="../index.html" class="site-logo" aria-label="Ir para a página inicial">
+            <img src="../assets/images/site/logo-site.svg" alt="Logo do site">
+        </a>
+        <ul id="menu">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="all-article.html">Artigos</a></li>
+            <li><a href="catechesis.html">Catequeses</a></li>
+            <li><a href="collection.html">Acervo</a></li>
+            <li><a href="considerations.html">Considerações</a></li>
+        </ul>
+    </header>
+
+<main class="category-page">
+    <div class="category-shell">
+        <div class="header-article">
+            <h1>Inscreva-se em nossa newsletter</h1>
+            <div class="article-subheader">
+                <p>e receba notificações sobre os novos artigos pelo WhatsApp</p>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <form action="" class="newsletter-form" id="form-inscricao">
+                <div class="inputs">
+                    <span>Nome:</span>
+                    <input type="text" name="nome" placeholder="Seu Nome" required>
+                </div>
+
+                <div class="inputs">
+                    <span>WhatsApp:</span>
+                    <input type="tel" name="whatsapp" placeholder="DDD + Número" required>
+                </div>
+
+                <label class="consent-row">
+                    <input type="checkbox" name="consentimento" required>
+                    <span>Aceito receber notificações de novos artigos pelo WhatsApp</span>
+                </label>
+
+                <button type="submit">
+                    Inscrever-se
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+</html>
